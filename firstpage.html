@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Malaysia</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
 	<style>
 		.menu {
 			box-shadow: none;
 			line-height: 10px;
 		}
 
-		/*testing push*/
+		/*testing push commit then push*/
 
 		.nav-menu {
 			display: flex;
@@ -36,10 +42,10 @@
 
 		.menu-item {
 			position: relative;
-			margin-top: 2px;
-			margin-bottom: 2px;
+			margin-top: 10px;
+			margin-bottom: 10px;
 			color: gray;/*@swatch_109c7a15*/
-			font-size: 12px;
+			font-size: 16px;
 			line-height: 18px;
 			font-weight: 700;
 			letter-spacing: 2px;
@@ -57,7 +63,7 @@
 
 		.header-image {
 			display: flex;
-			max-width: 1440px;
+			max-width: 1240px;
 			min-height: 530px;
 			min-width: 660px;
 			margin-right: auto;
@@ -106,28 +112,113 @@
 		.wrap {
 			position: relative;
 			display: block;
-			width: 940px;
+			width: 1020px;
 			margin-right: auto;
 			margin-left: auto;
 		}
 
-
 		.content-wrap {
+			display: flex;
+			width: 100%;
+			margin-right: auto;
+			margin-bottom: 20px;
+			margin-left: 0px;
+		}
+
+		.content-text-wrap-left{
 			display: block;
-			width: 70%;
+			width: 50%;
 			margin-right: auto;
 			margin-bottom: 100px;
+			margin-left: 0px;
+			text-align: left;
+		}
+
+		.content-text-wrap-right{
+			display: block;
+			width: 50%;
+			margin-right: 0px;
+			margin-bottom: 100px;
 			margin-left: auto;
-			text-align: center;
+			text-align: right;
+		}
+
+		.content-wrap-left {
+			display: block;
+			width: 50%;
+			margin-right: auto;
+			margin-bottom: 100px;
+			margin-left: 0px;
+			text-align: left;
+		}
+
+		.content-wrap-right {
+			display: block;
+			width: 50%;
+			margin-right: left;
+			margin-bottom: 100px;
+			margin-left: auto;
+			text-align: right;
+		}
+
+		.side-image{
+			margin-top: 20px;
+			max-width: 400px;
+			max-height: 400px;
+			width: auto;
+			height: auto;
+		}
+
+		.side-image-long{
+			margin-top: 20px;
+			max-width: 600px;
+			max-height: 600px;
+			width: auto;
+			height: auto;
 		}
 
 		.paragraph {
 			color: rgba(29, 31, 46, 0.7);
+			margin-bottom: 50px;
 			line-height: 1.6;
 		}
 
+		.footer {
+			margin: 100px 10px;
+			justify-content: space-evenly;
+			display: flex;
+		}
+		.footer-headline {
+			position: static;
+			display: block;
+			opacity: 0.6;
+			font-size: 20px;
+			line-height: 18px;
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		.footer-menu{
+			display: flex;
+			flex-direction: column;
+		}
 
-
+		.footer-menu a {
+			margin-bottom: 10px;
+			color: rgba(29, 31, 46, 0.7);
+			font-size: 18px;
+			line-height: 22px;
+			text-decoration: none;
+		}
+		.footer-menu a:hover {
+			color: #a25f4b;
+		}
+		.social-media{
+			font-size: 20px;
+			display: flex;
+			justify-content: space-evenly;
+			opacity: 0.8;
+		}
 
 		@media screen and (max-width: 767px) {
 			.header-image{
@@ -187,9 +278,60 @@
 		<div class="content">
 			<div class="wrap">
 				<div class="content-wrap">
-					<h2>Geography</h2>
-					<p class="paragraph">Located between two and seven degrees north of the Equator, Malaysia is formed by 13 states – Kelantan, Terengganu, Pahang, Johor, Melaka, Negeri Sembilan, Selangor, Perak, Pulau Pinang, Kedah, Perlis, Sabah and Sarawak; and three Federal Territories – Kuala Lumpur, Putrajaya, and Labuan. Sabah, Sarawak and Labuan are located in East Malaysia, while others are in Peninsular Malaysia.</p>
-					<a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+					<div class="content-text-wrap-left">
+						<h2>Geography</h2>
+						<p class="paragraph">Located between two and seven degrees north of the Equator, Malaysia is formed by 13 states – Kelantan, Terengganu, Pahang, Johor, Melaka, Negeri Sembilan, Selangor, Perak, Pulau Pinang, Kedah, Perlis, Sabah and Sarawak; and three Federal Territories – Kuala Lumpur, Putrajaya, and Labuan. Sabah, Sarawak and Labuan are located in East Malaysia, while others are in Peninsular Malaysia.</p>
+						<h2>Area and climate</h2>
+						<p class="paragraph">With an area of approximately 329,847 square kilometres, and warm tropical climate with temperatures ranging from 23°C to 32°C, Malaysia houses an infinite range of exciting tourism products throughout the year for visitors to explore and enjoy.</p>
+						<a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+					</div>
+					<img class="side-image" src="https://www.malaysia.travel/img/about-1.jpg" alt="this is img">
+				</div>
+				<div class="content-wrap">
+					<img class="side-image" src="https://www.malaysia.travel/img/about-1.jpg" alt="this is img">	
+					<div class="content-text-wrap-right">
+						<h2>History and economy</h2>
+						<p class="paragraph">The history of Malaysia started in the early 15th century with the establishment of the Melaka Sultanate. The country achieved independence on 31 August 1957 as the Federation of Malaya. Malaysia was formed in 1963 with the entry of Sabah and Sarawak.</p>
+						<p class="paragraph">Manufacturing constitutes the largest component of Malaysia’s economy, while tourism and primary commodities, namely petroleum, palm oil and timber, are also major contributors to the country’s economy.</p>
+						<a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+					</div>
+				</div>
+				<div class="content-wrap">
+					<div class="content-text-wrap-left">
+						<h2>People and culture</h2>
+						<p class="paragraph">Malaysia is a fascinating country with a vibrant multicultural population. Besides the Malays and the native groups, immigrants from China, India, Indonesia and other parts of the world have all contributed to the multi-racial composition of its population.</p>
+						<p class="paragraph">Based on statistics from the Department of Statistics Malaysia, the country’s population in 2020 is estimated at 32.7 million people. Out of the 29.7 million citizens, the Bumiputera (Malays and Orang Asli or indigenous peoples) comprises 69.6 percent of the population, the Chinese (22.6 percent), and Indians (6.9 percent), while others (1.0 percent).</p>
+						<p class="paragraph">The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch. The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch.</p>
+						<a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+					</div>		
+					<img class="side-image-long" src="https://www.malaysia.travel/img/klcc.jpg" alt="this is img">
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="wrap">
+				<div class="footer">		
+					<div class="footer-menu">
+						<p class="footer-headline">
+							discover<br>malaysia
+						</p>
+						<a href="/">Travel Ideas</a>
+						<a href="/">Experience</a>		
+					</div>
+					<div class="footer-menu">
+						<p class="footer-headline">DEALS</p>
+						<a href="/">Deals</a>
+						<a href="/">Travel Alert</a>
+					</div>
+					<div class="footer-menu">
+						<p class="footer-headline">FOLLOW US</p>
+						<div class="social-media">
+							<i class="fa fa-brands fa-instagram"></i>
+							<i class="fa fa-brands fa-youtube"></i>
+							<i class="fa fa-brands fa-facebook"></i>
+						</div>										
+					</div>
 				</div>
 			</div>
 		</div>
