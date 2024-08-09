@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+	<style>
+		.menu {
+			box-shadow: none;
+			line-height: 10px;
+		}
+
+		.nav-menu {
+			display: flex;
+			justify-content: center;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 0%;
+		} 
+
+		.menu-item-wrap {
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+			margin-right: 15px;
+			margin-left: 15px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			align-items: center;
+			opacity: 0.6;
+			transition-property: opacity;
+			transition-duration: 400ms;
+			transition-timing-function: ease;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		.menu-item {
+			position: relative;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			color: gray;/*@swatch_109c7a15*/
+			font-size: 12px;
+			line-height: 18px;
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-decoration: none;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+
+
+		.header-section {
+			margin-bottom: 100px;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+
+		.header-image {
+			display: flex;
+			max-width: 1440px;
+			min-height: 530px;
+			min-width: 660px;
+			margin-right: auto;
+			margin-left: auto;
+			justify-content: center;
+			align-items: stretch;
+			background-color: black;
+		}
+
+
+		.header-content {
+			display: flex;
+			width: 770px;
+			margin-right: auto;
+			margin-left: auto;
+			align-items: center;
+			background-position: 0px 0px, 50% 50%;
+			background-size: auto, cover;
+			color: white;
+		}
+
+
+		.header-text {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+		}
+
+		.header-headline-wrap {
+			margin-bottom: 25px;
+		}
+		.header-headline {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-size: 48px;
+			line-height: 60px;
+		}
+
+		.content {
+			position: relative;
+			display: block;
+			overflow: hidden;
+		}
+
+		.wrap {
+			position: relative;
+			display: block;
+			width: 940px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+
+		.content-wrap {
+			display: block;
+			width: 70%;
+			margin-right: auto;
+			margin-bottom: 100px;
+			margin-left: auto;
+			text-align: center;
+		}
+
+		.paragraph {
+			color: rgba(29, 31, 46, 0.7);
+			line-height: 1.6;
+		}
+
+
+
+
+		@media screen and (max-width: 767px) {
+			.header-image{
+				min-width: auto;
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.header-section{
+				justify-content: center;
+				padding-left: 0;
+				padding-right: 0;
+				display: flex;
+			}
+		}
+	</style>
+
+	<body>
+		<div class="menu">
+			<div class="wrap">
+				<a href="/" aria-current="page"><img src="" alt=""></a>
+				<nav role="navigation" class="nav-menu w-nav-menu">
+					<a href="./aboutus.html" aria-current="page" class="menu-item-wrap">
+						<div class="menu-item">Home</div>
+						<div class="menu-item-deco-line"></div>
+					</a>
+					<a href="/" aria-current="page" class="menu-item-wrap">
+						<div class="menu-item">Home</div>
+						<div class="menu-item-deco-line"></div>
+					</a>
+					<a href="/" aria-current="page" class="menu-item-wrap">
+						<div class="menu-item">Home</div>
+						<div class="menu-item-deco-line"></div>
+					</a>
+					<a href="/" aria-current="page" class="menu-item-wrap">
+						<div class="menu-item">Home</div>
+						<div class="menu-item-deco-line"></div>
+					</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="header-section">
+			<div class="header-image">
+				<div class="header-content">
+					<div class="header-text">
+						<div class="header-headline-wrap">
+							<div class="label cc-cover-label w-inline-block">Our Country</div>
+							<div class="header-headline">Malaysia</div>
+							<p>Let's discover the best country in Asia</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="wrap">
+				<div class="content-wrap">
+					<h2>Geography</h2>
+					<p class="paragraph">Located between two and seven degrees north of the Equator, Malaysia is formed by 13 states – Kelantan, Terengganu, Pahang, Johor, Melaka, Negeri Sembilan, Selangor, Perak, Pulau Pinang, Kedah, Perlis, Sabah and Sarawak; and three Federal Territories – Kuala Lumpur, Putrajaya, and Labuan. Sabah, Sarawak and Labuan are located in East Malaysia, while others are in Peninsular Malaysia.</p>
+					<a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
