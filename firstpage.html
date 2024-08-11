@@ -71,6 +71,8 @@
 			justify-content: center;
 			align-items: stretch;
 			background-color: black;
+			clip-path: polygon(0 0,100% 0%,100% 100%,0 100%);
+			transition: clip-path 0.1s ease;
 		}
 
 
@@ -112,17 +114,16 @@
 		.wrap {
 			position: relative;
 			display: block;
-			width: 1020px;
 			margin-right: auto;
 			margin-left: auto;
+			width: 1020px;
 		}
 
 		.content-wrap {
 			display: flex;
 			width: 100%;
-			margin-right: auto;
 			margin-bottom: 20px;
-			margin-left: 0px;
+			
 		}
 
 		.content-text-wrap-left{
@@ -143,24 +144,6 @@
 			text-align: right;
 		}
 
-		.content-wrap-left {
-			display: block;
-			width: 50%;
-			margin-right: auto;
-			margin-bottom: 100px;
-			margin-left: 0px;
-			text-align: left;
-		}
-
-		.content-wrap-right {
-			display: block;
-			width: 50%;
-			margin-right: left;
-			margin-bottom: 100px;
-			margin-left: auto;
-			text-align: right;
-		}
-
 		.side-image{
 			margin-top: 20px;
 			max-width: 400px;
@@ -169,12 +152,48 @@
 			height: auto;
 		}
 
-		.side-image-long{
+		.image-wrap{
+			position: relative;		
+			margin-right: 0px;
+			width: 300px;
+			height: 450px;
 			margin-top: 20px;
-			max-width: 600px;
-			max-height: 600px;
-			width: auto;
-			height: auto;
+		}
+
+		.image-wrap img{
+			position: absolute;
+			width: 100%;
+			right: 0;	
+			transition: 0.5s;	
+		}
+
+		.image-wrap.scroll .twin-cover{
+			filter: brightness(0.7) blur(2px);
+			box-shadow: 0 35px 35px -8px rgba(0,0,0,0.7);
+			transform: perspective(500px) rotateX(20deg);
+		}
+
+		.image-wrap.scroll .twin-tower{
+			filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7));
+			transform: translate3d(0,-30px,50px) scale(1.1);
+		}
+
+		
+
+		.twin-cover{
+			z-index: 1;
+
+
+		}
+		
+		.twin-tower{
+			z-index: 2;
+		}
+
+		.smoke{
+			bottom: 0px;
+			z-index: 3;
+			opacity: 0;
 		}
 
 		.paragraph {
@@ -234,6 +253,9 @@
 				display: flex;
 			}
 		}
+		.visible {
+            opacity: 0.5;
+        }
 	</style>
 
 	<body>
@@ -268,7 +290,7 @@
 						<div class="header-headline-wrap">
 							<div class="label cc-cover-label w-inline-block">Our Country</div>
 							<div class="header-headline">Malaysia</div>
-							<p>Let's discover the best country in Asia</p>
+							<p id="test">Let's discover the best country in Asia</p>
 						</div>
 					</div>
 				</div>
@@ -303,10 +325,14 @@
 						<p class="paragraph">Based on statistics from the Department of Statistics Malaysia, the country’s population in 2020 is estimated at 32.7 million people. Out of the 29.7 million citizens, the Bumiputera (Malays and Orang Asli or indigenous peoples) comprises 69.6 percent of the population, the Chinese (22.6 percent), and Indians (6.9 percent), while others (1.0 percent).</p>
 						<p class="paragraph">The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch. The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch.</p>
 						<a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
-					</div>		
-					<img class="side-image-long" src="https://www.malaysia.travel/img/klcc.jpg" alt="this is img">
+					</div>
+					<div class="image-wrap">
+						<img class="twin-cover" src="./klcccover.png" alt="this is img">
+						<img class="twin-tower" src="./R_preview_rev_1.png" alt="this is img">
+						<img class="smoke" src="./smokee.png" alt="this is img">
+					</div>	
 				</div>
-			</div>
+			</div>					
 		</div>
 
 		<div class="content">
@@ -336,4 +362,58 @@
 			</div>
 		</div>
 	</body>
+
+	<script>
+		const headerImage = document.getElementsByClassName('header-image')[0];
+		const tower = document.getElementsByClassName('image-wrap')[0];
+
+		function func(event){
+				
+				
+				let scrollDistance = Math.min(100,window.scrollY/10);
+				//console.log('Scroll Distance:', scrollDistance);
+				console.log('Scroll Distance:', scrollDistance);
+				const clipPathValue = `polygon(0 0,100% 0%,100% ${100 - scrollDistance}%,0 100%)`;
+				
+				headerImage.style.clipPath = clipPathValue;
+                /*for (var i = 0; i < images.length; i++) {
+                    let image = images[i];
+                    var rect = image.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                        image.classList.add('visible');
+                    } else {
+                        image.classList.remove('visible');
+                    }
+                }*/
+
+		}
+
+
+		/*const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting && entry.intersectionRatio === 1) {
+				// The image is fully visible in the viewport
+				tower.classList.toggle('scroll');
+				// Perform your desired action here
+			}
+			});
+		}, {
+			threshold: 1.0 // 1.0 means 100% of the image must be visible
+		});
+
+		observer.observe(tower);*/
+
+        function towerEffect(){
+			var rect = tower.getBoundingClientRect();
+            if (rect.top >= -200 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                tower.classList.add('scroll');
+            } else{
+				tower.classList.remove('scroll');
+			}
+		}
+
+		window.addEventListener('scroll',func);
+		window.addEventListener('scroll',towerEffect);
+		
+	</script>
 </html>
