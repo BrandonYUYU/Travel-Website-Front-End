@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.content {
+			position: relative;
+			display: block;
+			
+		}
+
+.wrap{
+			display: block;
+			margin: 0 17vw;
+		}
+
+.content-wrap {
+			display: flex;
+			width: 100%;
+			margin-bottom: 20px;
+			
+		}
+    .side-image-wrap{
+			margin-top: 20px;
+			margin-right: 0px;
+			max-width: 400px;
+			max-height: 400px;		
+			animation: appear linear;	
+			animation-timeline: view();
+    		animation-range: entry 0% cover 40%;
+		}
+
+		@keyframes appear{
+					from {
+				opacity: 0.3;
+				scale: 0.5;
+			}
+
+			to {
+				opacity: 1;
+				scale: 1;
+			}
+		}
+</style>
+
+<body>
+    <div class="content">
+        <div class="wrap">
+            <div class="content-wrap">
+                <div class="side-image-wrap-right">
+                    <img class="side-image" src="https://www.malaysia.travel/img/about-1.jpg" alt="this is img">
+                </div>
+                <div class="content-text-wrap-left">
+                    <h2>Geography</h2>
+                    <p class="paragraph">Located between two and seven degrees north of the Equator, Malaysia is formed by 13 states – Kelantan, Terengganu, Pahang, Johor, Melaka, Negeri Sembilan, Selangor, Perak, Pulau Pinang, Kedah, Perlis, Sabah and Sarawak; and three Federal Territories – Kuala Lumpur, Putrajaya, and Labuan. Sabah, Sarawak and Labuan are located in East Malaysia, while others are in Peninsular Malaysia.</p>
+                    <h2>Area and climate</h2>
+                    <p class="paragraph">With an area of approximately 329,847 square kilometres, and warm tropical climate with temperatures ranging from 23°C to 32°C, Malaysia houses an infinite range of exciting tourism products throughout the year for visitors to explore and enjoy.</p>
+                    <a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+                </div>
+                
+                
+            </div>
+            <div class="content-wrap">
+                <div class="side-image-wrap">
+                    <img class="side-image" src="https://www.malaysia.travel/img/about-1.jpg" alt="this is img">
+                </div>	
+                <div class="content-text-wrap-right">
+                    <h2>History and economy</h2>
+                    <p class="paragraph">The history of Malaysia started in the early 15th century with the establishment of the Melaka Sultanate. The country achieved independence on 31 August 1957 as the Federation of Malaya. Malaysia was formed in 1963 with the entry of Sabah and Sarawak.</p>
+                    <p class="paragraph">Manufacturing constitutes the largest component of Malaysia’s economy, while tourism and primary commodities, namely petroleum, palm oil and timber, are also major contributors to the country’s economy.</p>
+                    <a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+                </div>							
+            </div>
+            <div class="content-wrap">
+                <div class="content-text-wrap-left">
+                    <h2>People and culture</h2>
+                    <p class="paragraph">Malaysia is a fascinating country with a vibrant multicultural population. Besides the Malays and the native groups, immigrants from China, India, Indonesia and other parts of the world have all contributed to the multi-racial composition of its population.</p>
+                    <p class="paragraph">Based on statistics from the Department of Statistics Malaysia, the country’s population in 2020 is estimated at 32.7 million people. Out of the 29.7 million citizens, the Bumiputera (Malays and Orang Asli or indigenous peoples) comprises 69.6 percent of the population, the Chinese (22.6 percent), and Indians (6.9 percent), while others (1.0 percent).</p>
+                    <p class="paragraph">The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch. The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch.</p>
+                    <a href="/about" class="underlined-link cc-homepage-link">Read the full story</a>
+                </div>
+                <div class="image-wrap">
+                    <img class="twin-cover" src="./klcccover.png" alt="this is img">
+                    <img class="twin-tower" src="./R_preview_rev_1.png" alt="this is img">
+                </div>	
+            </div>
+        </div>					
+    </div>
+</body>
+</html>
