@@ -1,5 +1,6 @@
 body{
     background: #fffcef; 
+    overflow:scroll;
     margin: 0;
     padding: 0;
 }
@@ -7,7 +8,8 @@ body{
 /* most outer content block column by column */
 .content {
     position: relative;
-    display: block;	
+    display: block;
+    width: 100%;
 }
 
 /* center childs at center horizontally */
@@ -19,7 +21,8 @@ body{
 /* menu */
 .menu {
     box-shadow: none;
-    line-height: 10px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
 .menu-item-wrap{
     position: relative;
@@ -64,7 +67,7 @@ body{
     border: 1px solid rgb(177, 177, 177);
     
 }
-.nav-item:before{
+.nav-item:after{
     background-color: #fff3bcc0;
     content: "";
     height: calc(100% + 3px);
@@ -75,7 +78,7 @@ body{
     width: 100%;
     z-index: -1;
 }
-.nav-item:hover:before {
+.nav-item:hover:after {
     background-color: transparent;
     cursor: pointer;
 }

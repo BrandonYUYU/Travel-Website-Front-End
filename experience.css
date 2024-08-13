@@ -1,0 +1,46 @@
+.title{
+    display:flex;
+    justify-content: center;
+    height: 530px;
+    width: 100%;
+}
+
+.title p{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#first-letter{
+    color: gray;
+    padding-top: 200px;
+}
+#second-letter{
+    color: #97cba9;
+    align-self: flex-end;
+    padding-bottom: 200px;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    min-width: 600px;
+}
+
+.item-wrap{
+    display: flex;
+    flex-flow: row wrap;
+
+    margin: 0 auto;
+}
+
+.item-wrap div{
+    width: 200px;
+    height: 100px;
+}
