@@ -33,8 +33,12 @@
 					<div class="menu-item">Experience</div>
 					<div class="menu-item-deco-line"></div>
 				</a>
-				<a href="/" aria-current="page" class="menu-item-wrap">
-					<div class="menu-item">Gallery</div>
+				<a href="./hotel.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">Hotel</div>
+					<div class="menu-item-deco-line"></div>
+				</a>
+				<a href="./alert.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">Alert</div>
 					<div class="menu-item-deco-line"></div>
 				</a>
 			</nav>
@@ -114,19 +118,20 @@
 		  </div>
 
 		<div class="content">
-			<div class="wrap">
+			<div class="footer-wrap">
 				<div class="footer">		
 					<div class="footer-menu">
 						<p class="footer-headline">
 							discover<br>malaysia
 						</p>
-						<a href="/">Travel Ideas</a>
-						<a href="/">Experience</a>		
+						<a href="./about.html">About Malaysia</a>
+						<a href="./experience.html">Experience</a>		
 					</div>
 					<div class="footer-menu">
 						<p class="footer-headline">OTHERS</p>
-						<a href="/">Gallery</a>
-						<a href="/">Travel Alert</a>
+						<a href="./gallery.html">Gallery</a>
+						<a href="./alert.html">Travel Alert</a>
+						<a href="./weather.html">Weather</a>
 					</div>
 					<div class="footer-menu">
 						<p class="footer-headline">FOLLOW US</p>
@@ -142,43 +147,8 @@
 	</body>
 
 	<script>
-		const headerImage = document.getElementsByClassName('header-image')[0];
 		const tower = document.getElementsByClassName('tower-wrap')[0];
 
-		function func(event){
-				
-				
-				let scrollDistance = Math.min(100,window.scrollY/10);
-				//console.log('Scroll Distance:', scrollDistance);
-				const clipPathValue = `polygon(0 0,100% 0%,100% ${100 - scrollDistance}%,0 100%)`;
-				
-				headerImage.style.clipPath = clipPathValue;
-                /*for (var i = 0; i < images.length; i++) {
-                    let image = images[i];
-                    var rect = image.getBoundingClientRect();
-                    if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-                        image.classList.add('visible');
-                    } else {
-                        image.classList.remove('visible');
-                    }
-                }*/
-
-		}
-
-
-		/*const observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting && entry.intersectionRatio === 1) {
-				// The image is fully visible in the viewport
-				tower.classList.toggle('scroll');
-				// Perform your desired action here
-			}
-			});
-		}, {
-			threshold: 1.0 // 1.0 means 100% of the image must be visible
-		});
-
-		observer.observe(tower);*/
 
         function towerEffect(){
 			var rect = tower.getBoundingClientRect();
@@ -189,7 +159,6 @@
 			}
 		}
 
-		window.addEventListener('scroll',func);
 		window.addEventListener('scroll',towerEffect);
 		
 	</script>
